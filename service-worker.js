@@ -63,6 +63,7 @@ self.addEventListener('fetch', event => {
     //si la requête cible l'api
     if (event.request.url === API_URL) {
         // Stratégie Réseau d'abord pour l'API
+        console.log('network')
         event.respondWith(
             // on lance la requête sur le réseau
             fetch(event.request)
